@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- header -->
     <nav class="navbar bg-primary justify-content-between flex-nowrap flex-row">
       <div class="container-fluid">
         <div>here is Logo</div>
@@ -31,7 +32,33 @@
         </ul>
       </div>
     </nav>
-    <nuxt/>
+    <div class="wrapper">
+
+
+      <!-- sidebar -->
+      <nav
+        id="sidebar"
+        class="bg-primary text-white">
+        <div class="sidebar-header">
+          <h3>Bootstrap Sidebar</h3>
+        </div>
+
+        <li>
+          <a
+            href="#"
+            class="text-white">Portfolio</a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-white">Contact</a>
+        </li>
+      </nav>
+
+      <!-- page contents -->
+      <nuxt/>
+
+    </div>
   </div>
 </template>
 
@@ -89,5 +116,24 @@ ul {
 }
 li {
   flex-grow: 1;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 150px;
+  position: relative;
+  top: 20;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  /*
+  background: #7386d5;
+  color: #fff;
+  */
+  transition: all 0.3s;
 }
 </style>
